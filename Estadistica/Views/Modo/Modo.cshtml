@@ -1,0 +1,343 @@
+﻿
+@{
+    ViewData["Title"] = "Pantalla de Modo / Valor Modal";
+}
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords"
+          content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Xtreme lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Xtreme admin lite design, Xtreme admin lite dashboard bootstrap 5 dashboard template">
+    <meta name="description"
+          content="Xtreme Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
+    <meta name="robots" content="noindex,nofollow">
+    <title>@ViewData["Title"]</title>
+    <link rel="canonical" href="https://www.wrappixel.com/templates/xtreme-admin-lite/" />
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon.png">
+    <!-- Custom CSS -->
+    <link href="../../dist/css/style.min.css" rel="stylesheet">
+    <link href="~/css/site.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
+         data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+
+        <aside class="left-sidebar" data-sidebarbg="skin6">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <!-- User Profile-->
+                        <li>
+                            <!-- User Profile-->
+                            <div class="user-profile d-flex no-block dropdown m-t-20">
+                                <div class="user-pic">
+                                    <img src="../../assets/images/users/1.jpg" alt="users"
+                                         class="rounded-circle" width="40" />
+                                </div>
+                                <div class="user-content hide-menu m-l-10">
+                                    <a href="#" class="" id="Userdd" role="button"
+                                       data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <h5 class="m-b-0 user-name font-medium">
+                                            Carlos Pereira <i class="fa fa-angle-down"></i>
+                                        </h5>
+                                        <span class="op-5 user-email">carlos@gmail.com</span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Userdd">
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="javascript:void(0)">
+                                            <i class="fa fa-power-off m-r-5 m-l-5"></i> Cerrar Sesion
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End User Profile-->
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                               asp-controller="Home" asp-action="Index" aria-expanded="false">
+                                <i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Inicio</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                               asp-controller="Modo" asp-action="Modo" aria-expanded="false">
+                                <i class="mdi mdi-numeric"></i><span class="hide-menu">Modo = Mo</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                               asp-controller="Profesores" asp-action="Profesores" aria-expanded="false">
+                                <i class="mdi mdi-calculator"></i><span class="hide-menu">Mediana = Med</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                               asp-controller="Cursos" asp-action="Cursos" aria-expanded="false">
+                                <i class="mdi mdi-file"></i><span class="hide-menu">Media Aritmética Simple = x̄</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                               asp-controller="Carreras" asp-action="Carreras" aria-expanded="false">
+                                <i class="mdi mdi-settings"></i><span class="hide-menu">Media Aritmética Ponderada = x̄</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                               asp-controller="Periodos" asp-action="Periodos" aria-expanded="false">
+                                <i class="mdi mdi-math-compass"></i><span class="hide-menu">Recorrido = R</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <div class="page-breadcrumb">
+                <div class="row align-items-center">
+                    <div class="col-5">
+                        <h4 class="page-title">@ViewData["Title"]</h4>
+                        <div class="d-flex align-items-center">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Pantalla Modo / Valor Modal</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-7">
+                        <div class="text-end upgrade-btn">
+                            <a onclick="showInPopup('@Url.Action("InformacionModo","Modo",null, Context.Request.Scheme)','Definicion Modo')" class="btn btn-success text-white">Definicion</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+
+                            <div class="card-body">
+                                <h4 class="card-title">Ingrese la cantidad de digitos:</h4>
+                                <h6 class="card-subtitle">
+                                    Debe ser un rango entre 6 y 9
+                                </h6>
+                                <div class="form-group row">
+                                    <div class="col-md-3">
+                                        <input id="txtCantidad" type="number" placeholder="Cantidad digitos" min="0" max="10" class="form-control form-control-line" />
+                                    </div>
+                                    <div class="col-md-1">
+                                        <div class="text-end upgrade-btn">
+                                            <a onclick="definirCantidadDigitos()" class="btn btn-primary text-white">Definir</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h4 class="card-title">Ingrese la datos de entrada:</h4>
+                                <h6 class="card-subtitle">
+                                    Debe ser de 1 o 2 digitos enteros incluido el cero (0 - 99)
+                                </h6>
+                                <div id="Campos" class="form-group row">
+
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h4 class="card-title">Ordenamiento de los datos de entrada:</h4>
+                                <h6 class="card-subtitle">
+                                    Orden de los datos de entrada en forma creciente
+                                </h6>
+                                <div id="CamposOrdenados" class="form-group row">
+
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h4 class="card-title">Resultado de Modo / Valor Modal</h4>
+                                <h6 class="card-subtitle">
+                                    Se presenta el resultado del modo del conjunto de datos
+                                </h6>
+                                <div id="Resultados" class="form-group row">
+
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h4 class="card-title">Grafico</h4>
+                                <h6 class="card-subtitle">
+                                    Se presenta el grafico del modo del conjunto de datos
+                                </h6>
+                                <div id="Grafico" class="form-group row">
+                                    <canvas id="MiGrafica" width="400" height="300"></canvas>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h4 class="card-title">Desea otro ejercicio</h4>
+                                <h6 class="card-subtitle">
+                                    Para volver a realizar otro ejercicio presione este boton
+                                </h6>
+                                <div class="upgrade-btn">
+                                    <a asp-controller="Modo" asp-action="Modo" class="btn btn-success text-white">Nuevo ejercicio</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Right sidebar -->
+                <!-- ============================================================== -->
+                <!-- .right-sidebar -->
+                <!-- ============================================================== -->
+                <!-- End Right sidebar -->
+                <!-- ============================================================== -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="../../assets/libs/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="../../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../dist/js/app-style-switcher.js"></script>
+    <!--Wave Effects -->
+    <script src="../../dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="../../dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="../../dist/js/custom.js"></script>
+    <script src="~/js/site.js"></script>
+    <script src="~/js/Modo.js"></script>
+    <script src="~/js/GraficoModo.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.4.0/chart.js"></script>
+</body>
+@section scripts {
+    <script src="~/Scripts/jquery.jeditable.min.js"></script>
+    <script>
+        $(function () {
+            $(".table").DataTable();
+            $(".edit").editable("/Estudiantes/Actualizar", {
+                submitdata: function () {
+                    return {
+                        PropertyName: $(this).data("propertyname")
+                        //$(this).text(jsonData.value);
+                    }
+                },
+                //Función para poder recibir el nuevo valor y mostrarlo
+                callback: function (value, settings) {
+                    var jsonData = $.parseJSON(value);
+                    if (jsonData.status) {
+                        $(this).text(jsonData.value);
+                    }
+                    else {
+                        $(this).text(jsonData.mensaje);
+                    }
+                }
+            });
+            $("#listarConAjax").click(function (event) {
+                event.preventDefault();
+                var tabla = $("#tabla").DataTable();
+                tabla.destroy();
+                $.ajax({
+                    url: "/Estudiante/ListarAjax",
+                    success: function (resultado) {
+                        $("#tabla").DataTable({
+                            sort: false,
+                            data: resultado.data,
+                            columns: [
+                                { "data": "NumeroIdentificacion" },
+                                { "data": "Nombre" },
+                                { "data": "Apellidos" },
+                                {
+                                    "data": "FechaNac", "render": function (data, row, type, meta) {
+                                        if (data != undefined) {
+                                            var milisegundos = parseInt(data.replace("/Date(", "").replace(")/", ""));
+                                            return new Date(milisegundos).toLocaleDateString("en-UE");
+                                        }
+                                        else {
+                                            return data;
+                                        }
+                                    }
+                                },
+                                {
+                                    "data": "NumeroIdentificacion", "render": function (data, row, type, meta) {
+                                        return "<a class='btn btn-warning' href='/Estudiante/Editar/" + data + "'>Editar</a>" +
+                                            " " + "<a class='btn btn-danger' href='/Estudiante/Borrar/" + data + "'>Borrar</a>"
+                                    }
+                                }
+                            ]
+                        })
+                    }
+                });
+            });
+        });
+    </script>
+}
