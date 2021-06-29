@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewData["Title"] = "Pantalla de Modo / Valor Modal";
+    ViewData["Title"] = "Pantalla de Mediana";
 }
 
 <head>
@@ -137,14 +137,14 @@
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Pantalla Modo / Valor Modal</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Pantalla Mediana</li>
                                 </ol>
                             </nav>
                         </div>
                     </div>
                     <div class="col-7">
                         <div class="text-end upgrade-btn">
-                            <a onclick="showInPopup('@Url.Action("InformacionModo","Modo",null, Context.Request.Scheme)','Definicion Modo')" class="btn btn-success text-white">Definicion</a>
+                            <a onclick="showInPopup('@Url.Action("InformacionMediana","Mediana",null, Context.Request.Scheme)','Definicion Mediana')" class="btn btn-success text-white">Definicion</a>
                         </div>
                     </div>
                 </div>
@@ -166,7 +166,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">Ingrese la cantidad de digitos:</h4>
                                 <h6 class="card-subtitle">
-                                    Debe ser un rango entre 6 y 9
+                                    Debe ser un rango entre 7 y 10
                                 </h6>
                                 <div class="form-group row">
                                     <div class="col-md-3">
@@ -201,9 +201,9 @@
                             </div>
 
                             <div class="card-body">
-                                <h4 class="card-title">Resultado de Modo / Valor Modal</h4>
+                                <h4 class="card-title">Resultado de Mediana</h4>
                                 <h6 class="card-subtitle">
-                                    Se presenta el resultado del modo del conjunto de datos
+                                    Se presenta el resultado de la mediana del conjunto de datos
                                 </h6>
                                 <div id="Resultados" class="form-group row">
 
@@ -213,7 +213,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">Grafico</h4>
                                 <h6 class="card-subtitle">
-                                    Se presenta el grafico del modo del conjunto de datos
+                                    Se presenta el grafico de la mediana del conjunto de datos
                                 </h6>
                                 <div id="Grafico" class="form-group row">
                                     <canvas id="MiGrafica" width="400" height="300"></canvas>
@@ -226,7 +226,7 @@
                                     Para volver a realizar otro ejercicio presione este boton
                                 </h6>
                                 <div class="upgrade-btn">
-                                    <a asp-controller="Modo" asp-action="Modo" class="btn btn-success text-white">Nuevo ejercicio</a>
+                                    <a asp-controller="Mediana" asp-action="Mediana" class="btn btn-success text-white">Nuevo ejercicio</a>
                                 </div>
                             </div>
 
@@ -275,7 +275,7 @@
     <!--Custom JavaScript -->
     <script src="../../dist/js/custom.js"></script>
     <script src="~/js/site.js"></script>
-    <script src="~/js/Modo.js"></script>
-    <script src="~/js/GraficoModo.js"></script>
+    <script src="~/js/Mediana.js"></script>
+    <script src="~/js/GraficoMediana.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.4.0/chart.js"></script>
 </body>
