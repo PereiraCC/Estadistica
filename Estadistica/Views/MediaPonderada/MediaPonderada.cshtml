@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewData["Title"] = "Pantalla de Mediana";
+    ViewData["Title"] = "Pantalla de Media Aritmética Ponderada = x̄";
 }
 
 <head>
@@ -137,14 +137,14 @@
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Pantalla Mediana</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Pantalla Media Aritmética Ponderada = x̄</li>
                                 </ol>
                             </nav>
                         </div>
                     </div>
                     <div class="col-7">
                         <div class="text-end upgrade-btn">
-                            <a onclick="showInPopup('@Url.Action("InformacionMediana","Mediana",null, Context.Request.Scheme)','Definicion Mediana')" class="btn btn-success text-white">Definicion</a>
+                            <a onclick="showInPopup('@Url.Action("InformacionMediaPonderada","MediaPonderada",null, Context.Request.Scheme)','Definicion Media Aritmética Ponderada = x̄')" class="btn btn-success text-white">Definicion</a>
                         </div>
                     </div>
                 </div>
@@ -166,11 +166,11 @@
                             <div class="card-body">
                                 <h4 class="card-title">Ingrese la cantidad de digitos:</h4>
                                 <h6 class="card-subtitle">
-                                    Debe ser un rango entre 7 y 10
+                                    Debe ser un rango entre 7 y 15
                                 </h6>
                                 <div class="form-group row">
                                     <div class="col-md-3">
-                                        <input id="txtCantidad" type="number" placeholder="Cantidad digitos" min="0" max="10" class="form-control form-control-line" />
+                                        <input id="txtCantidad" type="number" placeholder="Cantidad digitos" min="0" max="15" class="form-control form-control-line" />
                                     </div>
                                     <div class="col-md-1">
                                         <div class="text-end upgrade-btn">
@@ -191,19 +191,29 @@
                             </div>
 
                             <div class="card-body">
-                                <h4 class="card-title">Ordenamiento de los datos de entrada:</h4>
+                                <h4 class="card-title">Tabla de frecuencia de los datos:</h4>
                                 <h6 class="card-subtitle">
-                                    Orden de los datos de entrada en forma creciente
+                                    Se presenta la tabla de frecuencia de los datos
                                 </h6>
-                                <div id="CamposOrdenados" class="form-group row">
+                                <div id="TablaFrecuencia" class="form-group row">
 
                                 </div>
                             </div>
 
                             <div class="card-body">
-                                <h4 class="card-title">Resultado de Mediana</h4>
+                                <h4 class="card-title">Sumatoria de los resultados</h4>
                                 <h6 class="card-subtitle">
-                                    Se presenta el resultado de la mediana del conjunto de datos
+                                    Se presenta la sumatoria de los resultados de la tabla
+                                </h6>
+                                <div id="SumaTabla" class="form-group row">
+
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h4 class="card-title">Resultado de Media Aritmética Ponderada = x̄</h4>
+                                <h6 class="card-subtitle">
+                                    Se presenta el resultado de la Media Aritmética Ponderada = x̄ del conjunto de datos
                                 </h6>
                                 <div id="Resultados" class="form-group row">
 
@@ -226,7 +236,7 @@
                                     Para volver a realizar otro ejercicio presione este boton
                                 </h6>
                                 <div class="upgrade-btn">
-                                    <a asp-controller="Mediana" asp-action="Mediana" class="btn btn-success text-white">Nuevo ejercicio</a>
+                                    <a asp-controller="MediaPonderada" asp-action="MediaPonderada" class="btn btn-success text-white">Nuevo ejercicio</a>
                                 </div>
                             </div>
 
@@ -275,7 +285,7 @@
     <!--Custom JavaScript -->
     <script src="../../dist/js/custom.js"></script>
     <script src="~/js/site.js"></script>
-    <script src="~/js/Mediana.js"></script>
-    <script src="~/js/GraficoMediana.js"></script>
+    <script src="~/js/MediaPonderada.js"></script>
+    <script src="~/js/GraficoMediaPonderada.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.4.0/chart.js"></script>
 </body>
