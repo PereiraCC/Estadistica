@@ -421,6 +421,7 @@ ordenarDigitos = () => {
     let template = ``;
     let templ = ``;
     var suma = 0;
+    var sumaF = 0;
     let contador = 0;
     var media = 0;
 
@@ -462,6 +463,7 @@ ordenarDigitos = () => {
                         <td id="rowDatoOrdenado">` + numerosOrdenados[i] + `</td>`;
                         if (numerosOrdenados[i] != numerosOrdenados[i-1]) {
                             templ += `<td id="rowFrecuencia">` + frecuencias[numerosUnicos[contador]] + `</td>`;
+                            sumaF = sumaF + frecuencias[numerosUnicos[contador]];
                             contador++;
                         } else {
                             templ += `<td id="rowFrecuencia"></td>`;
@@ -496,6 +498,7 @@ ordenarDigitos = () => {
                         <td id="rowDatoOrdenado">` + numerosOrdenados[i] + `</td>`;
                 if (numerosOrdenados[i] != numerosOrdenados[i - 1]) {
                     templ += `<td id="rowFrecuencia">` + frecuencias[numerosUnicos[contador]] + `</td>`;
+                    sumaF = sumaF + frecuencias[numerosUnicos[contador]];
                     contador++;
                 } else {
                     templ += `<td id="rowFrecuencia"></td>`;
@@ -530,6 +533,7 @@ ordenarDigitos = () => {
                         <td id="rowDatoOrdenado">` + numerosOrdenados[i] + `</td>`;
                 if (numerosOrdenados[i] != numerosOrdenados[i - 1]) {
                     templ += `<td id="rowFrecuencia">` + frecuencias[numerosUnicos[contador]] + `</td>`;
+                    sumaF = sumaF + frecuencias[numerosUnicos[contador]];
                     contador++;
                 } else {
                     templ += `<td id="rowFrecuencia"></td>`;
@@ -564,6 +568,7 @@ ordenarDigitos = () => {
                         <td id="rowDatoOrdenado">` + numerosOrdenados[i] + `</td>`;
                 if (numerosOrdenados[i] != numerosOrdenados[i - 1]) {
                     templ += `<td id="rowFrecuencia">` + frecuencias[numerosUnicos[contador]] + `</td>`;
+                    sumaF = sumaF + frecuencias[numerosUnicos[contador]];
                     contador++;
                 } else {
                     templ += `<td id="rowFrecuencia"></td>`;
@@ -598,6 +603,7 @@ ordenarDigitos = () => {
                         <td id="rowDatoOrdenado">` + numerosOrdenados[i] + `</td>`;
                 if (numerosOrdenados[i] != numerosOrdenados[i - 1]) {
                     templ += `<td id="rowFrecuencia">` + frecuencias[numerosUnicos[contador]] + `</td>`;
+                    sumaF = sumaF + frecuencias[numerosUnicos[contador]];
                     contador++;
                 } else {
                     templ += `<td id="rowFrecuencia"></td>`;
@@ -632,6 +638,7 @@ ordenarDigitos = () => {
                         <td id="rowDatoOrdenado">` + numerosOrdenados[i] + `</td>`;
                 if (numerosOrdenados[i] != numerosOrdenados[i - 1]) {
                     templ += `<td id="rowFrecuencia">` + frecuencias[numerosUnicos[contador]] + `</td>`;
+                    sumaF = sumaF + frecuencias[numerosUnicos[contador]];
                     contador++;
                 } else {
                     templ += `<td id="rowFrecuencia"></td>`;
@@ -666,6 +673,7 @@ ordenarDigitos = () => {
                         <td id="rowDatoOrdenado">` + numerosOrdenados[i] + `</td>`;
                 if (numerosOrdenados[i] != numerosOrdenados[i - 1]) {
                     templ += `<td id="rowFrecuencia">` + frecuencias[numerosUnicos[contador]] + `</td>`;
+                    sumaF = sumaF + frecuencias[numerosUnicos[contador]];
                     contador++;
                 } else {
                     templ += `<td id="rowFrecuencia"></td>`;
@@ -700,6 +708,7 @@ ordenarDigitos = () => {
                         <td id="rowDatoOrdenado">` + numerosOrdenados[i] + `</td>`;
                 if (numerosOrdenados[i] != numerosOrdenados[i - 1]) {
                     templ += `<td id="rowFrecuencia">` + frecuencias[numerosUnicos[contador]] + `</td>`;
+                    sumaF = sumaF + frecuencias[numerosUnicos[contador]];
                     contador++;
                 } else {
                     templ += `<td id="rowFrecuencia"></td>`;
@@ -734,6 +743,7 @@ ordenarDigitos = () => {
                         <td id="rowDatoOrdenado">` + numerosOrdenados[i] + `</td>`;
                 if (numerosOrdenados[i] != numerosOrdenados[i - 1]) {
                     templ += `<td id="rowFrecuencia">` + frecuencias[numerosUnicos[contador]] + `</td>`;
+                    sumaF = sumaF + frecuencias[numerosUnicos[contador]];
                     contador++;
                 } else {
                     templ += `<td id="rowFrecuencia"></td>`;
@@ -767,7 +777,7 @@ ordenarDigitos = () => {
             tablaFrecuencia.innerHTML = template;
     }
 
-    media = suma / cantidad;
+    media = suma / sumaF;
 
     template = `
     <div class="col-md-6">
@@ -775,7 +785,7 @@ ordenarDigitos = () => {
     </div>`;
     resultados.innerHTML = template;
     var temp = document.getElementById("txt");
-    temp.value = "x̄ = " + suma + "/" + cantidad + " x̄ = " + media.toFixed(2);
+    temp.value = "x̄ = " + suma + "/" + sumaF + " x̄ = " + media.toFixed(2);
 
     grafico(numerosOrdenados);
 }
